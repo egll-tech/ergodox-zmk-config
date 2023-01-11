@@ -7,36 +7,20 @@
 	keymap {
 		compatible = "zmk,keymap";
 
-		// This is the default test layer meant for testing that every key on
-		// your keyboard works. Once you have completed this basic test, you can
-		// delete this first section and layer_0 will become your default layer.
-		layer_test {
-			bindings = <
-				&bootloader
-				&kp NUM_0 &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp NUM_0 &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6
-				&kp NUM_0 &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp NUM_0 &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6
-				&kp NUM_0 &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5                     &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6
-				&kp NUM_0 &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp NUM_0 &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6
-				&kp NUM_0 &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4                                         &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6
-				                                                  &kp NUM_0 &kp NUM_1 &kp NUM_0 &kp NUM_1
-				                                        &kp NUM_3 &kp NUM_4 &kp NUM_2 &kp NUM_2 &kp NUM_3 &kp NUM_4
-				                                                            &kp NUM_5 &kp NUM_5
-			>;
-		};
-
 		layer_0 {
 			bindings = <
 				&bootloader
-				&kp GRAV &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp PRSC   &none      &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0  &kp K_APP
-				&kp TAB  &kp Q        &kp W        &kp E        &kp R        &kp T        &kp CLCK   &kp M_MUTE &kp Y        &kp U        &kp I        &kp O        &kp P         &kp BSLH
-				&kp ESC  &kp A        &kp S        &kp D        &kp F        &kp G                              &kp H        &kp J        &kp K        &kp L        &kp SEMICOLON &kp BKSP
-				&sl 2    &kp Z        &kp X        &kp C        &kp V        &kp B        &kp M_VOLD &kp M_VOLU &kp N        &kp M        &kp CMMA     &kp DOT      &kp FSLH      &sl 2
-				&none    &none        &kp LALT     &kp LARW     &kp UARW                                                     &kp DARW     &kp RARW     &kp RALT     &none         &to 3
+				&kp GRAV &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp MINUS  &kp EQUAL  &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0  &kp BKSP
+				&kp TAB  &kp Q        &kp W        &kp E        &kp R        &kp T        &kp M_VOLU &kp M_MUTE &kp Y        &kp U        &kp I        &kp O        &kp P         &kp BSLH
+				&kp ESC  &kp A        &kp S        &kp D        &kp F        &kp G                              &kp H        &kp J        &kp K        &kp L        &kp SEMICOLON &kp PRSC
+				&sl 2    &kp Z        &kp X        &kp C        &kp V        &kp B        &kp M_VOLD &none      &kp N        &kp M        &kp CMMA     &kp DOT      &kp FSLH      &sl 2
+				&kp CLCK &kp LGUI     &kp LALT     &kp LARW     &kp UARW                                                     &kp DARW     &kp RARW     &kp RALT     &kp K_APP     &to 3
 				                                                             &kp DEL      &kp HOME   &kp END    &kp INS
 				                                                &kp SPC      &kp LCTL     &kp PGUP   &kp PGDN   &kp LSFT     &kp RET
 				                                                                          &kp LGUI   &sl 1
 			>;
 		};
+
 		layer_1 {
 			bindings = <
 				&bootloader
@@ -66,14 +50,14 @@
 		layer_3 {
 			bindings = <
 				&bootloader
-				&none &none     &none        &none     &none    &none &none                &to 0                &none &none        &none        &none        &none        &none
-				&none &none     &none        &none     &none    &none &none                &none                &none &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none        &none
-				&none &kp SLASH &kp ASTERISK &kp MINUS &kp PLUS &none                                           &none &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0 &kp BACKSPACE
-				&none &none     &none        &none     &kp DOT  &none &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none        &none
-				&none &none     &none        &none     &none                                                          &none        &none        &none        &none        &to 0
-				                                                &none &none                &none                &none
-				                                       &none    &none &none                &none                &none &none
-				                                                      &none                &none
+				&none &none     &none        &none     &none    &none   &none                &to 0                &none &none        &kp SLASH    &kp ASTERISK &kp KP_MINUS &kp BKSP
+				&none &none     &none        &none     &none    &none   &none                &none                &none &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp KP_PLUS  &none
+				&none &kp SLASH &kp ASTERISK &kp MINUS &kp PLUS &none                                             &none &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp KP_PLUS  &none
+				&none &none     &none        &none     &kp DOT  &none   &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp RET      &none
+				&none &none     &none        &none     &none                                                            &kp NUMBER_0 &kp NUMBER_0 &kp KP_DOT   &kp RET      &to 0
+				                                                &kp DEL &none                &none                &none
+				                                       &none    &none   &none                &none                &none &kp RET
+				                                                        &none                &none
 			>;
 		};
 	};

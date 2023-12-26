@@ -16,8 +16,8 @@
 				&sl 2    &kp Z        &kp X        &kp C        &kp V        &kp B        &kp M_VOLD &none      &kp N        &kp M        &kp CMMA     &kp DOT      &kp FSLH      &sl 2
 				&kp CLCK &kp LGUI     &kp LALT     &kp LARW     &kp UARW                                                     &kp DARW     &kp RARW     &kp RALT     &kp K_APP     &to 3
 				                                                             &kp DEL      &kp HOME   &kp END    &kp INS
-				                                                &kp LSFT     &kp LCTL     &kp PGUP   &kp PGDN   &kp SPC      &kp LGUI
-				                                                                          &kp RET    &mo 1
+				                                              	&kp SPC      &kp LCTL     &kp PGUP   &kp PGDN   &kp LSFT     &kp RET
+				                                                                          &kp LGUI   &mo 1
 			>;
 		};
 
@@ -52,14 +52,14 @@
 		layer_3 {
 			bindings = <
 				&bootloader
-				&none &none     &none        &none     &none    &none   &none                &to 0                &none &none        &kp SLASH    &kp ASTERISK &kp KP_MINUS &kp BKSP
-				&none &none     &none        &none     &none    &none   &none                &none                &none &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp KP_PLUS  &none
-				&none &kp SLASH &kp ASTERISK &kp MINUS &kp PLUS &none                                             &none &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp KP_PLUS  &none
-				&none &none     &none        &none     &kp DOT  &none   &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp RET      &none
-				&none &none     &none        &none     &none                                                            &kp NUMBER_0 &kp NUMBER_0 &kp KP_DOT   &kp RET      &to 0
-				                                                &kp DEL &none                &none                &none
-				                                       &none    &none   &none                &none                &none &kp RET
-				                                                        &none                &none
+				&none &none     &none        &none     &none    &none    &none                &to 0                &none 	&none        &kp SLASH    &kp ASTERISK &kp KP_MINUS &kp BKSP
+				&none &none     &none        &none     &none    &none    &none                &none                &none 	&kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp KP_PLUS  &none
+				&none &kp SLASH &kp ASTERISK &kp MINUS &kp PLUS &none                                              &none 	&kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp KP_PLUS  &none
+				&none &none     &none        &none     &kp DOT  &none    &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC &none 	&kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp RET      &none
+				&none &none     &none        &none     &none                                                             	&kp NUMBER_0 &kp NUMBER_0 &kp KP_DOT   &kp RET      &to 0
+				                                                &kp DEL  &kp HOME   		  &kp END    		   &kp INS
+				                                       &kp SPC  &kp LCTL &kp PGUP   		  &kp PGDN  		   &kp LSFT &kp RET
+				                                                         &none                &none
 			>;
 		};
 	};

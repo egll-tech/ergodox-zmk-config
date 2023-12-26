@@ -4,5 +4,5 @@
 # "board". For a dongleless setup, you will need to modify both "board" and
 # "shield". Please see "readme.md" for more details.
 include:
-  - board: raytac_mdbt50q_rx_green
+  - board: raytac_mdbt50q_rx
     shield: slicemk_ergodox_dongle
